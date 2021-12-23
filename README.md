@@ -2,8 +2,8 @@
 ### UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify. Darmowa jednorazowa pula tokenów Ipify API to 1000. ###
 
 ## Opis ##
-Projekt responsywnej strony przygotowany na podstawie zadania 'E-commerce product page challenge hub' ze strony frontendmentor.io.
-Link do zadania: https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6
+Projekt aplikacji internetowej pozwalającej na sprawdzanie informacji o dowolnym adresie IP przy wykorzystaniu Ipify API.Projekt przygotowany na podstawie zadania 'IP Address Tracker' ze strony frontendmentor.io.
+Link do zadania: https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0
 
 ### Interakcje ###
 Zaimplementowane interakcje z użytkownikiem:
