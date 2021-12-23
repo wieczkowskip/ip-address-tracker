@@ -1,6 +1,5 @@
-// var map = L.map('map').setView([51.505, -0.09], 13);
-const cordinates = [53.02080723947551, 18.623863175094407];
-var map = new L.Map('map', {
+const cordinates = [0,0];
+const map = new L.Map('map', {
     center: cordinates,
     zoom: 12,
     zoomControl: false,
@@ -10,25 +9,25 @@ var map = new L.Map('map', {
         })
     ]
 });
+
+const mapDiv = document.getElementById('map');
+
 const xhr1 = new XMLHttpRequest();
     xhr1.open('GET', 'https://api.ipify.org/?format=json');
     xhr1.responseType = 'json';
     xhr1.onload = function(){
         userIp = xhr1.response['ip'];
-        console.log(userIp);
         getInformation(userIp);
     }
     xhr1.send();
-    
-    //getInformation(userIp);
+    const marker = L.marker(cordinates).addTo(map);
 
-const marker = L.marker(cordinates).addTo(map);
 
 const apiKey = ''; //TODO -> paste your ipify APIkey
 
 const submitBtn = document.querySelector('.form__submit');
 
-submitBtn.addEventListener('click', showLocation);
+submitBtn.addEventListener('click', getInput);
 
 const ipValueDiv = document.querySelector('#ip .info__value');
 const locationValueDiv = document.querySelector('#location .info__value');
@@ -36,14 +35,8 @@ const timezoneValueDiv = document.querySelector('#timezone .info__value');
 const ispValueDiv = document.querySelector('#isp .info__value');
 
 
-function showLocation(){
+function getInput(){
     const input = document.querySelector('input').value;
-    //const convertedInput = input.split(',');
-    //const fixedInput = convertedInput.map((item) => parseInt(item));
-    //console.log(fixedInput);
-    //marker.setLatLng(fixedInput);
-    //map.center = fixedInput;
-    //console.log(input);
     getInformation(input);
 }
 function getInformation(input){
@@ -61,11 +54,11 @@ function getInformation(input){
         locationValueDiv.innerHTML = location;
         timezoneValueDiv.innerHTML = timezone;
         ispValueDiv.innerHTML = isp;
-        console.log(output);
-        console.log(ip);
-        console.log(location);
-        console.log(timezone);
-        console.log(isp);
+        // console.log(output);
+        // console.log(ip);
+        // console.log(location);
+        // console.log(timezone);
+        // console.log(isp);
         const lat = output['location']['lat'];
         const lng = output['location']['lng'];
         marker.setLatLng([lat, lng]);
