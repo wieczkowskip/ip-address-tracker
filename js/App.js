@@ -40,7 +40,7 @@ function getInput(){
     getInformation(input);
 }
 function getInformation(input){
-    if(apiKey === ''){
+    if(apiKey === '' || apiKey === null){
         let userAPIkey = prompt('Do działania programu potrzebny jest APIkey Ipify, możesz go dodać w kodzie programu lub w polu poniżej. UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify.');
         if(userAPIkey !== '' || userAPIkey !== null){
             apiKey = userAPIkey;
