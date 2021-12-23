@@ -41,7 +41,7 @@ function getInput(){
 }
 function getInformation(input){
     if(apiKey === '' || apiKey === null){
-        let userAPIkey = prompt('Do działania programu potrzebny jest APIkey Ipify, możesz go dodać w kodzie programu lub w polu poniżej. UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify.');
+        let userAPIkey = prompt('PL: Do działania programu potrzebny jest APIkey Ipify, możesz go dodać w kodzie programu lub w polu poniżej. UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify.\nENG: APIkey Ipify is needed for the program to work, you can add it in the program code or in the field below. ATTENTION! Each page reload and APIkey Ipify application (because when the page is reloaded, the user\'s IP is retrieved and the user\'s IP information is retrieved) and each IP address lookup gets 2 tokens from APIkey Ipify.');
         if(userAPIkey !== '' || userAPIkey !== null){
             apiKey = userAPIkey;
             console.log(userAPIkey);
