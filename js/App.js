@@ -23,7 +23,7 @@ const xhr1 = new XMLHttpRequest();
     const marker = L.marker(cordinates).addTo(map);
 
 
-const apiKey = ''; //TODO -> paste your ipify APIkey
+let apiKey = ''; //TODO -> paste your ipify APIkey
 
 const submitBtn = document.querySelector('.form__submit');
 
@@ -40,6 +40,14 @@ function getInput(){
     getInformation(input);
 }
 function getInformation(input){
+    if(apiKey === ''){
+        let userAPIkey = prompt('Do działania programu potrzebny jest APIkey Ipify, możesz go dodać w kodzie programu lub w polu poniżej. UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify.');
+        if(userAPIkey !== '' || userAPIkey !== null){
+            apiKey = userAPIkey;
+            console.log(userAPIkey);
+            console.log(apiKey);
+        }
+    }
     const xhr2 = new XMLHttpRequest();
     console.log('https://geo.ipify.org/api/v2/country,city?apiKey=' + apiKey +'&ipAddress=' + input);
     xhr2.open('GET', 'https://geo.ipify.org/api/v2/country,city?apiKey=' + apiKey +'&ipAddress=' + input);
