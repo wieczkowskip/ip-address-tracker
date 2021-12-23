@@ -1,5 +1,5 @@
 # UWAGA #
-UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify. Darmowa jednorazowa pula tokenów Ipify API to 1000.
+### UWAGA! Każde przeładowanie strony i podanie APIkey Ipify(ponieważ przy przeładowaniu strony pobierane jest IP użytkownika oraz pobierane są informacje o IP użytkownika) oraz każde wyszukanie adresu IP pobiera 2 tokeny z APIkey Ipify. Darmowa jednorazowa pula tokenów Ipify API to 1000. ###
 
 ## Opis ##
 Projekt responsywnej strony przygotowany na podstawie zadania 'E-commerce product page challenge hub' ze strony frontendmentor.io.
